@@ -1,0 +1,17 @@
+.product-details {
+     margin-right: 20px;
+     width: 17rem;
+     height: 26rem;
+}
+
+.product-details img {
+     height: 20rem;
+     width: 100%;
+     object-fit: cover;
+
+}
+
+.product-details p {
+     text-decoration: none !important;
+     font-size: 18px;
+}

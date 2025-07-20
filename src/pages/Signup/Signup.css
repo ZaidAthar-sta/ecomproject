@@ -1,0 +1,77 @@
+/* Signup.css */
+
+.form-container {
+  max-width: 500px !important;
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #198754;
+  font-weight: 700;
+}
+
+.form label {
+  font-weight: 600;
+  margin-top: 15px;
+  display: block;
+  margin: 10px;
+  font-size: 18px;
+}
+
+.form input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.form input:focus {
+  border-color: #198754;
+  box-shadow: 0 0 5px rgba(25, 135, 84, 0.3);
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #198754;
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #157347;
+}
+
+p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+p a {
+  color: #198754;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+p a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 25px;
+  }
+}
