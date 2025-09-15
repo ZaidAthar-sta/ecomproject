@@ -1,31 +1,113 @@
-.hero-section {
-  background-color: #333;
-  padding: 80px 0;
-  min-height: 500px;
+:root {
+  --secondary-font: "Playfair Display", serif;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-family: var(--secondary-font);
+  font-size: 60px;
+  animation: hero-animation-two 0.75s ease-in forwards;
+}
+
+.hero-content h5 {
+  animation: hero-animate-one 0.75s ease-in forwards;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slide {
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 20px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.hero-content {
+  margin-left: 40px;
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  color: #ddd;
+  animation: text-animate 0.75s ease-in forwards;
 }
 
-.hero-img {
-  max-height: 400px;
-  width: 100%;
-  object-fit: contain;
+.hero-content h1,
+.hero-content h5,
+.hero-content p {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-@media (max-width: 768px) {
-  .hero-section {
-    text-align: center;
+.hero-content .shop-btn {
+  background-color: #717fe0;
+  border: none;
+  padding: 10px 25px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+  animation: btn-animate 0.75s ease-in forwards;
+
+}
+
+.hero-content .shop-btn:hover {
+  background-color: #333;
+
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 50%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 100px;
+}
+
+@keyframes hero-animation-two {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
   }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
-  .hero-img {
-    margin-top: 30px;
+@keyframes hero-animate-one {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes text-animate {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes btn-animate {
+  0% {
+    transform: scaleX(0.5);
+    opacity: 0;
+  }
+  100% {
+      transform: scaleX(1);
+      opacity: 1;
   }
 }

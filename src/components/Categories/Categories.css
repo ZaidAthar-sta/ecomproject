@@ -1,0 +1,45 @@
+.category-container .content {
+  width: 100%; /* or max-width: 100% */
+  position: relative; /* ✅ this is key */
+  border: 1px solid #ddd;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.category-container .content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.category-container {
+  margin-bottom: 60px; /* ✅ create space after categories */
+}
+
+
+.category-text {
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  transform: translateX(-50%);
+  color: #333333;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.category-container .content:hover img {
+  filter: brightness(0.7);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.category p {
+  font-size: 14px;
+  color: #555555;
+}

@@ -50,3 +50,21 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+h2 {
+  text-align: left !important;
+}
+
+.add-to-cart-btn {
+  background-color: #717fe0;
+}
+
+.add-to-cart-btn:hover {
+  background-color: black;
+  border: 1px solid black;
+}
+
+.form-select {
+  border: none !important;
+  text-decoration: underline;
+}

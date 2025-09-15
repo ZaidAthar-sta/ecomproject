@@ -32,7 +32,7 @@ export default function Contact() {
             <p className="contactLearnP mb-4">
               Learn more about our team and Job Openings.
             </p>
-            <Button className="btn-success" id="exploreJobs" variant="primary">
+            <Button className="explore-btn " id="exploreJobs" variant="primary">
               Explore Jobs
             </Button>
           </Col>

@@ -48,7 +48,7 @@ const AllProducts = () => {
 
   return (
     <div className="container py-5">
-      <h2 className="text-center mb-4">All Products</h2>
+      <h2 className="text-dark p-3 mb-4">All Products</h2>
       <div className="row">
         {list.length === 0 ? (
           <div className="col-12 text-center">
@@ -56,7 +56,7 @@ const AllProducts = () => {
           </div>
         ) : (
           list.map((product, index) => (
-            <div key={index} className="col-md-6 col-lg-4 mb-4">
+            <div key={index} className="col-md-6 col-lg-3 mb-4">
               <div className="card product-card-admin h-100 shadow-sm">
                 <div className="admin-img-container">
                   <img
@@ -72,7 +72,7 @@ const AllProducts = () => {
                       ? product.description.slice(0, 100) + "..."
                       : product.description}
                   </p>
-                  <p className="fw-semibold text-primary">Rs. {product.price}</p>
+                  <p className="fw-semibold mt-0 text-dark">Rs. {product.price}</p>
                   <div className="mt-auto d-flex justify-content-between">
                     <button
                       className="btn btn-outline-danger"

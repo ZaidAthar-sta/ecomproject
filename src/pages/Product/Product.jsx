@@ -91,12 +91,12 @@ const Product = () => {
         </Col>
         <Col md={6} className='product-description' >
           <h2>{product.title}</h2>
-          <h4 className="text-success mt-2 ">{currency} {product.price.toFixed(2)}</h4>
+          <h4 className="text-dark mt-2 ">{currency} {product.price.toFixed(2)}</h4>
           <p className="text-muted">Category: {product.category}</p>
           <p>{product.description}</p>
           <Button
             variant="primary"
-            className="mt-3"
+            className="mt-3 add-to-cart-btn "
             onClick={handleAddToCart}
             disabled={product.stock <= 0}
           >

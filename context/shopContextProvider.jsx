@@ -113,7 +113,7 @@ const ShopContextProvider = ({ children }) => {
                     toast.error(response.data.message);
                }
           } catch (error) {
-               console.error(error);
+               console.error("Update cart error:", error.response?.data || error.message);
                toast.error("Failed to update cart");
           }
      };

@@ -5,7 +5,7 @@ import './Sidebar.css';
 
 const Sidebar = ({ isAdmin = false }) => {
      return (
-          <div className="d-flex flex-column p-3 text-white bg-dark" style={{ width: '200px' }}>
+          <div className="d-flex sidebar flex-column p-3 text-white bg-dark" style={{ width: '200px' }}>
                <h4 className="text-center mb-4">Dashboard</h4>
                <ul className="nav nav-pills flex-column mb-auto">
                     <li className="nav-item">
@@ -23,11 +23,6 @@ const Sidebar = ({ isAdmin = false }) => {
                               <li>
                                    <Link to="/product/add" className="nav-link text-white">
                                         <i className="bi bi-bag-check me-2"></i> Add Product
-                                   </Link>
-                              </li>
-                              <li>
-                                   <Link to="/product/list" className="nav-link text-white">
-                                        <i className="bi bi-bag-check me-2"></i> All Product
                                    </Link>
                               </li>
                               <li>

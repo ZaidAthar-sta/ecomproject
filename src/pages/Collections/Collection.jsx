@@ -62,21 +62,21 @@ const Collection = () => {
   }
 
   return (
-    <Container className="collection-container py-5">
-      <h2 className="text-center mb-4">Explore Our Collection</h2>
+    <Container className="collection-container py-5 mt-5">
+      <h2 className="text-dark mb-4">Explore Our Collection</h2>
 
       {/* Filters */}
-      <div className="filters-section p-3 mb-4 bg-light rounded">
+      <div className="filters-section p-3 mb-4 rounded">
         <Row>
-          <Col md={3}>
-            <Form.Select value={category} onChange={e => setCategory(e.target.value)}>
+          <Col md={2}>
+            <Form.Select /*style={{width:"100%"}} */value={category} onChange={e => setCategory(e.target.value)}>
               {categories.map(cat => (
                 <option key={cat} value={cat}>{cat.charAt(0).toUpperCase() + cat.slice(1)}</option>
               ))}
             </Form.Select>
           </Col>
-          <Col md={3}>
-            <Form.Select value={price} onChange={e => setPrice(e.target.value)}>
+          <Col md={2}>
+            <Form.Select /* style={{width:"62%"}} */ value={price} onChange={e => setPrice(e.target.value)}>
               <option value="all">All Prices</option>
               <option value="0-50">$0 - $50</option>
               <option value="50-100">$50 - $100</option>
@@ -84,8 +84,8 @@ const Collection = () => {
               <option value="200-">$200+</option>
             </Form.Select>
           </Col>
-          <Col md={3}>
-            <Form.Select value={sort} onChange={e => setSort(e.target.value)}>
+          <Col md={2}>
+            <Form.Select /*style={{width:"70%"}} */ value={sort} onChange={e => setSort(e.target.value)}>
               <option value="default">Newest</option>
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
@@ -140,10 +140,10 @@ const Collection = () => {
                     {p.description.length > 80 ? p.description.slice(0, 80) + '...' : p.description}
                   </Card.Text>
                   <div className="d-flex justify-content-between align-items-center">
-                    <span className="price text-success">${p.price.toFixed(2)}</span>
+                    <span className="price text-dark">${p.price.toFixed(2)}</span>
                     <Button
-                      className='btn-success'
-                      variant="primary"
+                      className='btn add-to-cart-btn'
+                     
                       onClick={() => handleCart(p._id)}
                       disabled={p.stock <= 0}
                     >
@@ -160,4 +160,4 @@ const Collection = () => {
   )
 }
 
-export default Collection
+export default Collection;

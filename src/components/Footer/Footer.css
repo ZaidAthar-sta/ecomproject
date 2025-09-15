@@ -1,5 +1,6 @@
 .footer {
   font-size: 15px;
+  background-color: #222222;
 }
 
 .footer h5 {
@@ -29,4 +30,8 @@
 
 .footer ul li {
      margin: 3px 0;
+}
+
+.footer .social-icons {
+  font-size: 18px;
 }

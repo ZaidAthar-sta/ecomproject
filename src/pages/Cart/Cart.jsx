@@ -2,6 +2,7 @@ import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useContext, useEffect } from 'react';
 import shopContext from '../../../context/shopContext.js';
+import "./Cart.css"
 
 const Cart = () => {
 
@@ -11,7 +12,7 @@ const Cart = () => {
      const [paymentMethod, setPaymentMethod] = useState('Cash');
 
      if (!cartItems || cartItems.length === 0) {
-          return <div className="container my-5 text-center">
+          return <div style={{marginTop:"85px"}} className="container mb-5 cart-container text-center">
                <h3>Your cart is empty</h3>
           </div>
      }
@@ -45,14 +46,14 @@ const Cart = () => {
      };
 
      if (!cartItems || cartItems.length === 0) {
-          return <div className="container my-5 text-center"><h3>Your cart is empty</h3></div>;
+          return <div style={{marginTop:"85px"}} className="container cart-container mb-5 text-center"><h3>Your cart is empty</h3></div>;
      }
 
 
      return (
           <>
 
-               <div className="container my-5">
+               <div style={{marginTop:"85px"}} className="container cart-container mb-5">
                     <h2 className="mb-4">Your Cart</h2>
                     <div className="row">
                          {cartItems.map((item, index) => (
@@ -71,7 +72,7 @@ const Cart = () => {
                                                        <h5 className="card-title">{item.product?.title}</h5>
                                                        <p className="card-text">Price: {currency}{item.product?.price}</p>
                                                        <p className="card-text text-muted">Category: {item.product?.category}</p>
-                                                       <div className="d-flex align-items-center mb-2">
+                                                           <div className="d-flex align-items-center mb-2">
                                                             <button
                                                                  className="btn btn-sm btn-outline-secondary me-2"
                                                                  onClick={() => handleQuantityChange(item.product._id, item.quantity - 1)}
