@@ -1,7 +1,5 @@
 import React from "react"
-import "./contact.css"
-// import Title from "../../components/Title/Title"
-// import { assets } from "../../assets/assets"
+import "./Contact.css"
 import contact_img from "../../assets copy/contact_img.png"
 import { Container, Row, Col, Button } from "react-bootstrap"
 
