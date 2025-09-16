@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 .contactSection {
   min-height: 70vh;
   background-color: #f9f9f9;
-  margin-top: 75px;
+  /* margin-top: 75px; */
 }
 
 .contactImage {
@@ -15,6 +15,17 @@
   object-fit: cover;
   transition: transform 0.3s ease;
   cursor: default;
+}
+
+.bg-img-heading {
+  background-image: url("../../assets copy/bg-01.jpg.webp");
+  background-repeat: no-repeat;
+  padding: 80px 0;
+}
+
+.bg-img-heading h2 {
+  font-weight: 700;
+  font-size: 50px;
 }
 
 .contactImage:hover {
@@ -51,6 +62,7 @@
 
 .explore-btn:hover {
   background-color: black;
+  border: 1px solid black;
 }
 
 @media (max-width: 768px) {
@@ -60,5 +72,5 @@
 }
 
 p {
-     text-align: left;
+  text-align: left;
 }

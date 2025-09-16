@@ -6,7 +6,7 @@
 
 .product-details img {
   height: 334px;
-  width: 100%;
+  width: 100% !important;
   object-fit: cover;
 }
 

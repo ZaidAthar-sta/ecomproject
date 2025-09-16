@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import shopContext from "../../../context/shopContext";
 import navbarImg from "../../assets copy/logo-01.png.webp";
@@ -9,6 +9,8 @@ const Navbar = () => {
   const { token, setToken } = useContext(shopContext);
   const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   const handleLogout = () => {
     localStorage.removeItem("token");
@@ -23,25 +25,35 @@ const Navbar = () => {
       const isScrolled = window.scrollY > 10;
       setScrolled(isScrolled);
 
-      if (isScrolled) {
-        document.body.classList.add("fixed-navbar-active");
-      } else {
+      if (isHomePage && !isScrolled) {
         document.body.classList.remove("fixed-navbar-active");
+      } else {
+        document.body.classList.add("fixed-navbar-active");
       }
     };
 
+    if (!isHomePage) {
+      setScrolled(true); // Always show white navbar on non-home pages
+      document.body.classList.add("fixed-navbar-active");
+      return;
+    }
+
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Initial check
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.body.classList.remove("fixed-navbar-active");
     };
-  }, []);
-  
+  }, [isHomePage]);
 
   return (
     <nav
-      className={`navbar navbar-expand-lg custom-navbar py-3 ${
-        scrolled ? "navbar-scrolled fixed-navbar" : ""
-      }`}
+      className={`navbar navbar-expand-lg custom-navbar py-3
+    ${isHomePage && !scrolled ? "navbar-absolute" : "fixed-navbar"}
+    ${isHomePage && scrolled ? "navbar-scrolled" : ""}
+    ${!isHomePage ? "navbar-fixed-white" : ""}
+  `}
     >
       <div className="container">
         <Link className="navbar-brand text-dark fw-bold" to="/">

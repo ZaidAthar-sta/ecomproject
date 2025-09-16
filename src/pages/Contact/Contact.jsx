@@ -5,10 +5,13 @@ import { Container, Row, Col, Button } from "react-bootstrap"
 
 export default function Contact() {
   return (
-    <div className="contactSection py-5">
-      <Container>
+    <div className="contactSection pb-5">
+      <div className="bg-img-heading pb-5">
+        <h2 className="text-white text-center">Contact</h2>
+      </div>
+      <Container className="mt-5" >
         {/* <Title text1={"contact"} text2={"us"} /> */}
-        <Row className="align-items-center contactContainer mt-4">
+        <Row className="align-items-center contactContainer mt-5">
           <Col md={6} className="text-center mb-4 mb-md-0">
             <img
               src={contact_img}

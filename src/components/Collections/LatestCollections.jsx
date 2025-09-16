@@ -73,12 +73,12 @@ const LatestCollections = () => {
           <li className="nav-item" role="presentation">
             <button
               className="nav-link pills-link"
-              id="pills-fancy-tab"
+              id="pills-women-tab"
               data-bs-toggle="pill"
-              data-bs-target="#pills-fancy"
+              data-bs-target="#pills-women"
               type="button"
               role="tab"
-              aria-controls="pills-fancy"
+              aria-controls="pills-women"
               aria-selected="false"
             >
               Women
@@ -101,13 +101,13 @@ const LatestCollections = () => {
           </li>
           <li className="nav-item" role="presentation">
             <button
-              className="nav-link pills-link active"
-              id="pills-shuttle-tab"
+              className="nav-link pills-link"
+              id="pills-shoes-tab"
               data-bs-toggle="pill"
-              data-bs-target="#pills-shuttle"
+              data-bs-target="#pills-shoes"
               type="button"
               role="tab"
-              aria-controls="pills-shuttle"
+              aria-controls="pills-shoes"
               aria-selected="true"
             >
               Shoes
@@ -116,12 +116,12 @@ const LatestCollections = () => {
           <li className="nav-item" role="presentation">
             <button
               className="nav-link pills-link"
-              id="pills-fancy-tab"
+              id="pills-watches-tab"
               data-bs-toggle="pill"
-              data-bs-target="#pills-fancy"
+              data-bs-target="#pills-watches"
               type="button"
               role="tab"
-              aria-controls="pills-fancy"
+              aria-controls="pills-watches"
               aria-selected="false"
             >
               Watches
@@ -155,6 +155,30 @@ const LatestCollections = () => {
             aria-labelledby="pills-patches-tab"
           >
             {renderProductGrid("Patches")}
+          </div>
+           <div
+            className="tab-pane fade"
+            id="pills-watches"
+            role="tabpanel"
+            aria-labelledby="pills-watches-tab"
+          >
+            {renderProductGrid("Watches")}
+          </div>
+           <div
+            className="tab-pane fade"
+            id="pills-shoes"
+            role="tabpanel"
+            aria-labelledby="pills-shoes-tab"
+          >
+            {renderProductGrid("shoes")}
+          </div>
+            <div
+            className="tab-pane fade"
+            id="pills-women"
+            role="tabpanel"
+            aria-labelledby="pills-women-tab"
+          >
+            {renderProductGrid("Women")}
           </div>
         </div>
       </div>
