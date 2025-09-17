@@ -9,11 +9,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 16px;
   transition: border-color 0.3s;
 }
 
 .uploadImgContainer label:hover {
-  border-color: #0d6efd;
+  border-color: #717fe0;
 }
 
 .uploadImgContainer img {
@@ -24,8 +25,8 @@
 }
 
 button[type="submit"] {
-     width: 9rem !important;
-     padding: 10px 10px !important;
+  width: 9rem !important;
+  padding: 10px 10px !important;
 }
 
 .add-btn {
@@ -35,4 +36,22 @@ button[type="submit"] {
 .add-btn:hover {
   background-color: black !important;
   color: white !important;
+}
+
+.add-product-container form {
+  border: 1px solid #80808042;
+}
+
+.add-product-container input {
+  height: 60px;
+}
+
+.add-product-container input,textarea {
+  border-radius: 0 !important;
+  font-size: 16px;
+}
+
+.form-control:focus {
+  border: 1px solid #717fe0 !important;
+  box-shadow: 0 0 0 0.25rem #7180e05e;
 }

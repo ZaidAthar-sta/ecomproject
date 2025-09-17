@@ -98,6 +98,11 @@ const Navbar = () => {
                 My Cart
               </Link>
             </li>
+            <li>
+              <Link to="/profile" className="nav-link ">
+                <i className="bi bi-person-circle me-2"></i> Profile
+              </Link>
+            </li> 
           </ul>
         </div>
       </div>

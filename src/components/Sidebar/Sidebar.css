@@ -1,9 +1,14 @@
+.sidebar {
+    border-right:3px solid white ;
+}
 .sidebar .nav-pills .nav-link{
    background-color: transparent !important;
+   color: black !important;
+   font-size: 16px;
 }
 
 .sidebar .nav-pills .nav-link:hover,
 .sidebar .nav-pills .nav-link.active {
-    color: gray !important;
+    color: #717fe0 !important;
     text-decoration: none !important;
 }

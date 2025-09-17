@@ -75,11 +75,11 @@
     );
 
     return (
-      <div className="container my-5">
+      <div className="container add-product-container my-5">
         <h2 className="text-dark mb-4">Add New Product</h2>
         <form
           onSubmit={onSubmitHandler}
-          className="p-4 shadow-sm rounded bg-white"
+          className="p-4 bg-white"
         >
           <div className="mb-4">
             <h5 className="mb-2">Upload Images</h5>
@@ -92,7 +92,7 @@
           </div>
 
           <div className="row">
-            <div className="col-md-6 mb-3">
+            <div className="col-md-6 mb-3 ps-0">
               <label className="form-label fw-semibold">Product Name</label>
               <input
                 type="text"
@@ -115,7 +115,7 @@
                 required
               />
             </div>
-            <div className="col-md-6 mb-3">
+            <div className="col-md-6 mb-3 ps-0">
               <label className="form-label fw-semibold">Category</label>
               <input
                 type="text"
@@ -128,7 +128,7 @@
             </div>
           </div>
 
-          <div className="mb-3">
+          <div className="mb-3 textarea-div">
             <label className="form-label fw-semibold">Product Description</label>
             <textarea
               className="form-control"

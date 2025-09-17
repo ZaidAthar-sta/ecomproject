@@ -45,7 +45,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="col-md-3 mb-4">
             <h5>Categories</h5>
-            <ul className="list-unstyled">
+            <ul className="list-unstyled categories-list">
               <li>
                 <Link to="/product/list" className="footer-link">
                   Shop Now
@@ -75,13 +75,13 @@ const Footer = () => {
             <h5>Stay Connected</h5>
             <p>Follow us on social media for latest updates and offers.</p>
             <div className="social-icons">
-              <a href="https://facebook.com" className="me-3 text-white">
+              <a href="https://facebook.com" className="me-3">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
-              <a href="https://instagram.com" className="me-3 text-white">
+              <a href="https://instagram.com" className="me-3">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <a href="https://twitter.com" className="text-white">
+              <a href="https://twitter.com" className="">
                 <FontAwesomeIcon icon={faTwitter} />
               </a>
             </div>

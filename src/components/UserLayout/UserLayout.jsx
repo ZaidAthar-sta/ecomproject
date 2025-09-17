@@ -13,7 +13,7 @@ const UserLayout = () => {
                     <Navbar />
                     <div className="flex-grow-1 d-flex">
                          <Sidebar />
-                         <div className="w-100 p-3">
+                         <div className="w-100">
                               <Outlet /> {/* This is where nested routes will render */}
                          </div>
                     </div>
